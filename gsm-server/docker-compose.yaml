@@ -1,5 +1,8 @@
+version: '3.8' # Make sure to specify the Compose file version
+
 services:
   gsm-server:
+    pull_policy: build # Custom key; ensure your tooling supports this
     build:
       context: ./data # Path to the Dockerfile folder
     container_name: gsm_server
