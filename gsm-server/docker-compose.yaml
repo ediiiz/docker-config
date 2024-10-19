@@ -1,15 +1,15 @@
 services:
   gsm-server:
     build:
-      context: ./data  # Path to the Dockerfile folder
+      context: ./data # Path to the Dockerfile folder
     pull_policy: build
     container_name: gsm_server
     ports:
-      - "8080:8080"   # HTTP
-      - "8443:8443"   # HTTPS
+      - "8080:8080" # HTTP
+      - "8443:8443" # HTTPS
       - "162:162/udp" # SNMP
-      - "69:69/udp"   # TFTP
-      - "5900:5900"   # Java KVM (iKVM)
+      - "69:69/udp" # TFTP
+      - "5900:5900" # Java KVM (iKVM)
     volumes:
       - gsm_data:/opt/gsm/data
     environment:
