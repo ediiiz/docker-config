@@ -2,7 +2,6 @@ services:
   gsm-server:
     build:
       context: ./data # Path to the Dockerfile folder
-    pull_policy: build
     container_name: gsm_server
     ports:
       - "8080:8080" # HTTP
